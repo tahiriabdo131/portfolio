@@ -16,5 +16,5 @@ Screenshots
 
 * Home page :
 
-* ![image](https://user-images.githubusercontent.com/56969009/198878259-ad10993e-6505-4234-ab4c-40e34abf87a8.png)
+![image](https://user-images.githubusercontent.com/56969009/198878313-9f5d9905-c6f0-4e20-8031-69c04b819c06.png)
 
