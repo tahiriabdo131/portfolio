@@ -2,6 +2,7 @@
   --primaryColor: #28a3e4;
   --lightColor: white;
   --darkColor: #3e3f43;
+  --blackColor: #0a141d;
   --padding: 8%;
 }
 
@@ -15,6 +16,12 @@ html {
   font-family: "Josefin Sans", "Arial", sans-serif;
   font-size: 16px;
   color: var(--darkColor);
+}
+
+p {
+  letter-spacing: 1px;
+  line-height: 1.8rem;
+  font-size: 1.2rem;
 }
 
 h1 {
@@ -32,7 +39,14 @@ h4 {
   letter-spacing: 0.12rem;
 }
 
-span {
+h5 {
+  font-size: 1.37rem;
+  margin-bottom: 0.6rem;
+  letter-spacing: 2px;
+  text-decoration: underline 3px solid var(--lightColor);
+}
+
+.home span {
   color: var(--primaryColor);
 }
 
@@ -44,7 +58,8 @@ span {
 }
 
 nav {
-  padding-top: 2.8rem;
+  /* padding-top: 2.8rem; */
+  padding-top: 1rem;
   padding-left: var(--padding);
   padding-right: var(--padding);
   display: flex;
@@ -61,7 +76,7 @@ nav ul li {
 nav ul li a {
   color: var(--darkColor);
   text-decoration: none;
-  text-transform: capitalize;
+  text-transform: uppercase;
   transition: 0.4s;
   font-weight: bold;
 }
@@ -115,26 +130,92 @@ nav ul li a:hover {
   transform: scale(1.2);
 }
 
-.container-images {
+.home .container-images {
   width: 45%;
   height: 90%;
   position: relative;
   align-self: flex-end;
 }
 
-.container-images img {
-    position: absolute;
-    bottom: 0;
-    height: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: bottom 1s, left 1s;
+.home .container-images img {
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: bottom 1s, left 1s;
 }
 
-.container-images:hover .shape {
-    bottom: 40px;
+.home .container-images:hover .shape {
+  bottom: 40px;
 }
 
-.container-images:hover .me {
-  left: 45%;
+.about {
+  display: flex;
+  background-color: var(--primaryColor);
+  color: var(--lightColor);
+  padding: 2rem var(--padding);
+  align-items: center;
+  justify-content: space-around;
+}
+
+.about span {
+  color: var(--darkColor);
+}
+
+.about .container-images {
+  width: 35%;
+}
+
+.about .container-images img {
+  width: 100%;
+}
+
+.about .container-texts {
+  width: 45%;
+}
+
+.skills-div {
+  margin-bottom: -2.5rem;
+}
+
+.skills-div h1,
+.skills-div p {
+  text-align: center;
+}
+
+.skills {
+  display: flex;
+  padding: 2rem var(--padding);
+  align-items: center;
+  justify-content: space-around;
+}
+
+.skills .container-images {
+  width: 45%;
+}
+
+.skills .container-images img {
+  width: 90%;
+}
+
+.skills .container-technologies {
+  width: 45%;
+}
+
+.technologie_img {
+  padding: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 4rem;
+  height: 4rem;
+  box-shadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07);
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.technologie_img img {
+  width: 100%;
 }
