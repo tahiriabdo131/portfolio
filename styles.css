@@ -113,6 +113,7 @@ nav ul li a:hover {
   border-radius: 10px;
   border: 2px solid var(--primaryColor);
   transition: 0.4s;
+  cursor: pointer;
 }
 
 .download-cv:hover {
