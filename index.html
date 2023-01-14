@@ -17,15 +17,19 @@
 <body>
     <section class="home" id="home">
         <nav>
-            <img src="images/logo.png" alt="Logo" height="120" width="160">
-            <ul>
+            <img src="images/logo.png" alt="Logo" height="100" width="150">
+            <ul class="actions">
                 <li><a href="#home">home</a></li>
                 <li><a href="#projects">projects</a></li>
                 <li><a href="#skills">skills</a></li>
-                <!-- <li><a href="#education">education</a></li> -->
-                <!-- <li><a href="#experiences">experiences</a></li> -->
                 <li><a href="#contact">contact</a></li>
             </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="x-mark">&times;</div>
+            </div>
         </nav>
         <div class="content">
             <div class="container-texts">
@@ -35,13 +39,6 @@
                 <button class="download-cv">
                     <a href="cv/Abdelali_TAHIRI.pdf" download target="_blank">DOWNLOAD CV</a>
                 </button>
-                <!-- <div class="social">
-                    <a href="#"><img src="images/gmail.png" alt="Gmail" /></a>
-                    <a href="#"><img src="images/linkedin.png" alt="Linkedin" /></a>
-                    <a href="#"><img src="images/github.png" class="Github" /></a>
-                    <a href="#"><img src="images/youtube.png" class="Youtube" /></a>
-                    <a href="#"><img src="images/whatsapp.png" class="Whatsapp" /></a>
-                </div> -->
             </div>
             <div class="container-images">
                 <img src="images/shape.png" alt="Shape" class="shape">
@@ -55,9 +52,9 @@
             <img src="images/developer.png" alt="" />
         </div>
         <div class="container-texts">
-            <h1>About <span>Me</span></h1>
-            <h5>Full-Stack <span>Developer</span></h5>
-            <p>A passionate Full Stack Developer having an experience of building Web and Mobile applications with
+            <h1>About <span class="text-warning">Me</span></h1>
+            <p>A passionate <span class="text-hero">Full Stack Developer</span> having an experience of building Web and
+                Mobile applications with
                 JavaScript (React.js & Node.js) and some other cool libraries and frameworks.
             </p>
         </div>
@@ -66,33 +63,39 @@
         <h1 class="text-center">My <span>Projects</span></h1>
         <div class="box">
             <div class="card">
-                <img src="images/amf-lazar.png" alt="AMF LAZAR" target="_blank"/>
+                <a href="https://amf-lazar.com/" target="_blank">
+                    <img src="images/amf-lazar.png" alt="AMF LAZAR" />
+                </a>
                 <h5><a href="https://amf-lazar.com" target="_blank">AMF LAZAR</a></h5>
                 <div class="par">
                     <p>The creation of a showcase website for a company of tiles and marbles</p>
                 </div>
                 <a href="https://github.com/tahiriabdo131/AMF-LAZAR" target="_blank">
-                    <img src="./images/github.svg" alt="Github"/>
+                    <img src="./images/github.svg" alt="Github" />
                 </a>
             </div>
             <div class="card">
-                <img src="images/omni-food-white.png" alt="OMNI FOOD" target="_blank"/>
+                <a href="https://tahiriabdo131.github.io/OMNI-FOOD" target="_blank">
+                    <img src="images/omni-food-white.png" alt="OMNI FOOD" />
+                </a>
                 <h5><a href="https://tahiriabdo131.github.io/OMNI-FOOD" target="_blank">OMNI FOOD</a></h5>
                 <div class="par">
                     <p>The implementation of a showcase website for OMNI-FOOD Restaurant</p>
                 </div>
                 <a href="https://github.com/tahiriabdo131/OMNI-FOOD" target="_blank">
-                    <img src="./images/github.svg" alt="Github"/>
+                    <img src="./images/github.svg" alt="Github" />
                 </a>
             </div>
             <div class="card">
-                <img src="images/awaka.jpg" alt="AWAKA" target="_blank"/>
+                <a href="https://kafilelyatim.org" target="_blank">
+                    <img src="images/awaka.jpg" alt="AWAKA" />
+                </a>
                 <h5><a href="https://admin.kafilelyatim.org" target="_blank">AWAKA</a></h5>
                 <div class="par">
                     <p>The Realization of a management platform for an association of widows and orphans</p>
                 </div>
                 <a href="https://github.com/itpext/awka-front" target="_blank">
-                    <img src="./images/github.svg" alt="Github"/>
+                    <img src="./images/github.svg" alt="Github" />
                 </a>
             </div>
         </div>
@@ -103,7 +106,6 @@
             <p>I AM ALWAYS LOOKING FOR CHALLENGING OPPORTUNITIES TO SHOW MY ABILITIES</p>
         </div>
         <div class="container-skills">
-            <!-- <div class="content-skills"> -->
             <div class="skill">
                 <img src="images/html.svg" alt="HTML" />
             </div>
@@ -164,7 +166,6 @@
             <div class="skill">
                 <img src="images/postgresql.svg" alt="Postgresql" />
             </div>
-            <!-- </div> -->
             <div class="skill">
                 <img src="images/vscode.svg" alt="Vscode" />
             </div>
@@ -178,15 +179,20 @@
             <h2>Abdelali <span>TAHIRI</span></h2>
             <p class="welcome">If you want to say Hi or discuss a project ? my Inbox Is open for all</p>
             <div class="social">
-                <a href="mailto:tahiriabdo131@gmail.com" target="_blank"><img src="images/gmail.png" alt="Gmail"/></a>
-                <a href="https://www.linkedin.com/in/tahiri-abdelali/" target="_blank"><img src="images/linkedin.png" alt="Linkedin"/></a>
-                <a href="https://github.com/tahiriabdo131" target="_blank"><img src="images/github.png" alt="Github"/></a>
-                <a href="https://www.youtube.com/@abdelalitahiri8514" target="_blank"><img src="images/youtube.png" alt="Youtube"/></a>
-                <a href="http://wa.me/+212771846356"  target="_blank"><img src="images/whatsapp.png" alt="Whatsapp"/></a>
+                <a href="mailto:tahiriabdo131@gmail.com" target="_blank"><img src="images/gmail.png" alt="Gmail" /></a>
+                <a href="https://www.linkedin.com/in/tahiri-abdelali/" target="_blank"><img src="images/linkedin.png"
+                        alt="Linkedin" /></a>
+                <a href="https://github.com/tahiriabdo131" target="_blank"><img src="images/github.png"
+                        alt="Github" /></a>
+                <a href="https://www.youtube.com/@abdelalitahiri8514" target="_blank"><img src="images/youtube.png"
+                        alt="Youtube" /></a>
+                <a href="http://wa.me/+212771846356" target="_blank"><img src="images/whatsapp.png"
+                        alt="Whatsapp" /></a>
             </div>
-            <p class="copyRight">CopyRight By Abdelali TAHIRI</p>
+            <p class="copyRight">CopyRight © 2023 par Abdelali TAHIRI</p>
         </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
