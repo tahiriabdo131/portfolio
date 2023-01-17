@@ -67,13 +67,25 @@ nav ul li a {
   color: var(--darkColor);
   text-decoration: none;
   text-transform: uppercase;
-  transition: 0.4s;
   font-weight: bold;
+  position: relative;
 }
 
-nav ul li a:hover {
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2.3px;
+  bottom: -1.2px;
+  left: 0;
+  background-color: var(--primaryColor);
+  transition: 0.5s;
+}
+
+nav ul li a:hover::before {
+  width: 100%;
   color: var(--primaryColor);
-  border-bottom: 0.2rem solid var(--primaryColor);
+  /* border-bottom: 0.2rem solid var(--primaryColor); */
 }
 
 section {
@@ -199,8 +211,10 @@ section {
 }
 
 .projects h5 {
-  color: var(--primaryColor);
+  font-size: 120%;
+  color: var(--warning);
   font-weight: bold;
+  text-decoration: underline var(--warning) solid 2px;
 }
 
 .projects .box {
@@ -215,12 +229,35 @@ section {
   color: var(--lightColor);
   padding: 1.3rem 2rem;
   text-align: center;
+  background-size: cover;
 }
 
 .projects .card img {
   width: 30%;
   margin-bottom: 0.5rem;
   border-radius: 10%;
+}
+
+.projects .card-1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+    url(../images/carrelage.jpeg);
+}
+
+.projects .card-2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+    url(../images/world_cup.png);
+  background-position: center;
+}
+
+.projects .card-3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+    url(../images/food.jpg);
+    background-position: center;
+}
+
+.projects .card-4 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+    url(../images/orphelin.jpg);
 }
 
 .skills {
@@ -233,6 +270,7 @@ section {
 .skills .text-center {
   flex-basis: 100%;
   text-align: center;
+  padding: 0 var(--padding);
 }
 
 .skills .container-images {
@@ -427,6 +465,11 @@ footer .copyRight {
     gap: 1rem;
   }
 
+  .projects h5 {
+    color: var(--primaryColor);
+    text-decoration-color: var(--primaryColor);
+  }
+
   .skills .container-images {
     display: none;
   }
@@ -447,8 +490,18 @@ footer .copyRight {
   }
 }
 
-@media screen and (min-width: 992px) and (min-width: 1279px) {
+@media screen and (min-width: 992px) and (max-width: 1279px) {
   .home .container-images .shape {
     width: 100%;
+  }
+
+  .projects {
+    height: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .projects .box {
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 }
