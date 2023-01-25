@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Abdelali TAHIRI</title>
     <meta name="description" content="I'm a javaScript (Node.js & React.js) Front-end Developer">
-    <meta name="keywords" content="Tahiri, Abdelali, JavaScript, React, Front-end, Developer, Full-stack">
-    <link rel="stylesheet" href="./css/styles.css">
+    <meta name="keywords" content="Tahiri, Abdelali, Abdelali TAHIRI, JavaScript, React, Node, Java, Front-end, Developer, Full-stack, MERN-stack">
+    <meta name="author" content="Abdelali TAHIRI">
     <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
@@ -19,10 +20,10 @@
         <nav>
             <img src="images/logo.png" alt="Logo" height="100" width="150">
             <ul class="actions">
-                <li><a href="#home">home</a></li>
-                <li><a href="#projects">projects</a></li>
-                <li><a href="#skills">skills</a></li>
-                <li><a href="#contact">contact</a></li>
+                <li><a href="#home" onclick="hiddeMenu()">home</a></li>
+                <li><a href="#projects" onclick="hiddeMenu()">projects</a></li>
+                <li><a href="#skills" onclick="hiddeMenu()">skills</a></li>
+                <li><a href="#contact" onclick="hiddeMenu()">contact</a></li>
             </ul>
             <div class="hamburger">
                 <div class="line"></div>
@@ -35,7 +36,7 @@
             <div class="container-texts">
                 <h4>Hello, my name is</h4>
                 <h1>Abdelali <span>TAHIRI</span></h1>
-                <h3>I'm a <span>Full-Stack</span> Developer.</h3>
+                <h3 id="write-text"><span id="write-text-span"></span></h3>
                 <button class="download-cv">
                     <a href="cv/Abdelali_TAHIRI.pdf" download target="_blank">DOWNLOAD CV</a>
                 </button>

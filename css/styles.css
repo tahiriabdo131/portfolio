@@ -45,16 +45,13 @@ a:hover,
 a:focus,
 a:active {
   text-decoration: none;
-  color: inherit;
 }
 
 nav {
-  padding-top: 1rem;
-  padding-left: var(--padding);
-  padding-right: var(--padding);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem var(--padding) 0 var(--padding);
 }
 
 nav ul li {
@@ -85,7 +82,6 @@ nav ul li a::before {
 nav ul li a:hover::before {
   width: 100%;
   color: var(--primaryColor);
-  /* border-bottom: 0.2rem solid var(--primaryColor); */
 }
 
 section {
@@ -264,7 +260,6 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding-top: 1rem;
 }
 
 .skills .text-center {
@@ -345,6 +340,7 @@ footer .copyRight {
 .hamburger {
   display: none;
   position: relative;
+  cursor: pointer;
 }
 
 /* Media Queries */
@@ -408,7 +404,7 @@ footer .copyRight {
     margin: 50px;
   }
 
-  nav ul li a {
+  nav ul li a, nav ul li a:hover {
     color: var(--lightColor);
   }
 
@@ -430,7 +426,7 @@ footer .copyRight {
 
   .hamburger .x-mark {
     font-size: 4.5rem;
-    color: var(--warning);
+    color: var(--primaryColor);
     display: none;
   }
 
