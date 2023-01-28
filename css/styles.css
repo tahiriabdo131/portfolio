@@ -241,15 +241,15 @@ section {
 }
 
 .projects .card-2 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
     url(../images/world_cup.png);
-  background-position: center;
+    background-position: center;
 }
 
 .projects .card-3 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
-    url(../images/food.jpg);
-    background-position: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+    url(../images/students.png);
+  background-position: center;
 }
 
 .projects .card-4 {
