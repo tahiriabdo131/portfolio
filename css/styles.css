@@ -229,6 +229,10 @@ section {
   background-size: cover;
 }
 
+.projects .card-img {
+  height: 4.5rem;
+}
+
 .projects .card img {
   width: 30%;
   margin-bottom: 0.5rem;
