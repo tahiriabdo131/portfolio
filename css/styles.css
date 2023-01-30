@@ -229,10 +229,6 @@ section {
   background-size: cover;
 }
 
-.projects .card-img {
-  height: 4.5rem;
-}
-
 .projects .card img {
   width: 30%;
   margin-bottom: 0.5rem;
@@ -500,9 +496,15 @@ footer .copyRight {
     height: 100%;
     margin-bottom: 1rem;
   }
-  
+
   .projects .box {
     flex-wrap: wrap;
     gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .projects .card-img {
+    height: 4.5rem;
   }
 }
