@@ -1,11 +1,24 @@
+// [
+//   {
+//     "relation": ["delegate_permission/common.handle_all_urls"],
+//     "target": {
+//       "namespace": "android_app",
+//       "package_name": "io.ionic.starter",
+//       "sha256_cert_fingerprints": [
+//         "9E:02:58:0D:44:AD:51:15:4C:07:6C:BB:59:21:67:71:7A:A2:A0:48:76:C1:A5:DD:5E:60:CD:90:A5:7E:43:A8"
+//       ]
+//     }
+//   }
+// ]
+
 [
   {
     "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
       "namespace": "android_app",
-      "package_name": "io.ionic.starter",
+      "package_name": "com.suez.voyago",
       "sha256_cert_fingerprints": [
-        "9E:02:58:0D:44:AD:51:15:4C:07:6C:BB:59:21:67:71:7A:A2:A0:48:76:C1:A5:DD:5E:60:CD:90:A5:7E:43:A8"
+        "DA:E0:42:46:2D:D3:E4:83:31:33:A5:AB:E4:06:55:EC:20:E3:7A:6A:83:A2:B0:75:B8:DC:F7:6F:7F:89:5F:06"
       ]
     }
   }
