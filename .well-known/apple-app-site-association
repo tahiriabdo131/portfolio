@@ -11,7 +11,7 @@
                 "paths": ["/share/*", "/commune/*"]
             },
             {
-                "appID": "apple-id.bundle",
+                "appID": "1619110692.com.suez.tsme",
                 "paths": ["/upload_counter_by_mobile_app/*"]  
             }
         ]
