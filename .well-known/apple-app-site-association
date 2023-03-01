@@ -7,8 +7,12 @@
                 "paths": ["/share/*", "/commune/*"]
             },
             {
-                "appID": "84MT877E69.com.suez.voyagoproject",
+                "appID": "1614842571.com.suez.voyagoproject",
                 "paths": ["/share/*", "/commune/*"]
+            },
+            {
+                "appID": "apple-id.bundle",
+                "paths": ["/upload_counter_by_mobile_app/*"]  
             }
         ]
     }
