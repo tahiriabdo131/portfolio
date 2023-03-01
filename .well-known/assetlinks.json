@@ -19,16 +19,14 @@
       ]
     }
   },
-  [
-    {
-      "relation": ["delegate_permission/common.handle_all_urls"],
-      "target": {
-        "namespace": "android_app",
-        "package_name": "com.suez.tsme",
-        "sha256_cert_fingerprints": [
-          "7B:4D:4D:FD:DA:B2:84:DB:94:3C:B2:C5:8A:27:28:5A:90:0D:09:C0:4C:07:0C:39:2B:2B:95:85:5D:62:96:E0"
-        ]
-      }
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.suez.tsme",
+      "sha256_cert_fingerprints": [
+        "7B:4D:4D:FD:DA:B2:84:DB:94:3C:B2:C5:8A:27:28:5A:90:0D:09:C0:4C:07:0C:39:2B:2B:95:85:5D:62:96:E0"
+      ]
     }
-  ]
+  }
 ]
