@@ -1,0 +1,15 @@
+{
+    "applinks": {
+    "apps": [],
+    "details": [
+            {
+                "appID": "AV86DPYTYA.com.suez.voyago",
+                "paths": ["/share/*", "/commune/*"]
+            },
+            {
+                "appID": "84MT877E69.com.suez.voyagoproject",
+                "paths": ["/share/*", "/commune/*"]
+            }
+        ]
+    }
+}
