@@ -37,9 +37,9 @@
             <div class="container-texts">
                 <div
                     style="background-color: #EEE;display: flex;justify-content: center; padding: 16px;margin: 16px 24px">
-                    <a href="https://abdelalitahiri.com/upload_counter_by_mobile_app/test"
+                    <a href="#" onclick="myFunction()"
                         style="background-color: #4394ff;color: white;padding: 10px; border-radius: 5px;">
-                        Go to mobile app
+                        Open Instagram
                     </a>
                 </div>
                 <h4>Hello, my name is</h4>
@@ -93,7 +93,8 @@
                 </div>
                 <h5><a href="https://tahiriabdo131.github.io/bingo-world-cup/" target="_blank">BINGO WORLD CUP</a></h5>
                 <div class="par">
-                    <p>The Realization of an app to play the bingo game from the years and the winners of the world cup</p>
+                    <p>The Realization of an app to play the bingo game from the years and the winners of the world cup
+                    </p>
                 </div>
                 <a href="https://github.com/tahiriabdo131/bingo-world-cup" target="_blank">
                     <img src="./images/github.svg" alt="Github" />
@@ -235,6 +236,12 @@
             <p class="copyRight">CopyRight © 2023 par Abdelali TAHIRI</p>
         </div>
     </footer>
+    <script>
+        function myFunction() {
+            const url = "intent://instagram.com/#Intent;scheme=https;package=com.instagram.android;end";
+            window.location.replace(url);
+        }
+    </script>
     <script src="js/script.js"></script>
 </body>
 
