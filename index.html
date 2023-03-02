@@ -37,7 +37,11 @@
             <div class="container-texts">
                 <div
                     style="background-color: #EEE;display: flex;justify-content: center; padding: 16px;margin: 16px 24px">
-                    <a href="#" onclick="myFunction()"
+                    <a href="#" onclick="openInsta()"
+                        style="background-color: #4394ff;color: white;padding: 10px; border-radius: 5px;">
+                        Open AMA
+                    </a>
+                    <a href="#" onclick="openAMA()"
                         style="background-color: #4394ff;color: white;padding: 10px; border-radius: 5px;">
                         Open AMA
                     </a>
@@ -237,9 +241,22 @@
         </div>
     </footer>
     <script>
-        function myFunction() {
-            const url = "intent://toutsurmoneau.fr/#Intent;scheme=https;package=com.suez.tsme.app;end";
+        function openAMA() {
+            //Android
+            // const url = "intent://toutsurmoneau.fr/#Intent;scheme=https;package=com.suez.tsme;end";
+            // window.location.replace("ama-mobile://");
+
+            //IOS
             window.location.replace("ama-mobile://");
+        }
+
+        function openInsta() {
+            //Android
+            // const url = "intent://instagram.com/#Intent;scheme=https;package=com.instagram.android;end";
+            // window.location.replace(url);
+
+            //IOS
+            window.location.replace("instagram://");
         }
     </script>
     <script src="js/script.js"></script>
