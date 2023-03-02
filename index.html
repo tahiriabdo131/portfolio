@@ -243,11 +243,17 @@
     <script>
         function openAMA() {
             //Android
-            // const url = "intent://toutsurmoneau.fr/#Intent;scheme=https;package=com.suez.tsme;end";
-            // window.location.replace("ama-mobile://");
+            if (navigator.userAgent.match(/Android/i)) {
+                alert("You are using android");
+                const url = "intent://abdelalitahiri.com/#Intent;scheme=https;package=com.suez.tsme;end";
+                window.location.replace(url);
+            }
 
             //IOS
-            window.location.replace("ama-mobile://");
+            if (navigator.userAgent.match(/iPhone/i)) {
+                alert("You are using IOS");
+                window.location.replace("ama-mobile://");
+            }
         }
 
         function openInsta() {
@@ -259,7 +265,7 @@
             }
 
             //IOS
-            if(navigator.userAgent.match(/iPhone/i)) {
+            if (navigator.userAgent.match(/iPhone/i)) {
                 alert("You are using IOS");
                 window.location.replace("instagram://");
             }
