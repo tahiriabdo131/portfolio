@@ -259,14 +259,14 @@
         function openInsta() {
             //Android
             if (navigator.userAgent.match(/Android/i)) {
-                alert("You are using android My friend");
-                const url = "intent://instagram.com/#Intent;scheme=https;package=com.instagram.android;end";
+                alert("You are using android");
+                const url = "intent://instagram.com/upload_counter_by_mobile_app/#Intent;scheme=https;package=com.instagram.android;end";
                 window.location.replace(url);
             }
 
             //IOS
             if (navigator.userAgent.match(/iPhone/i)) {
-                alert("You are using IOS My friend");
+                alert("You are using IOS");
                 window.location.replace("instagram://");
             }
         }
