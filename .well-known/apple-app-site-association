@@ -12,7 +12,11 @@
             },
             {
                 "appID": "1619110692.com.suez.tsme",
-                "paths": ["/upload_counter_by_mobile_app/*"]  
+                "paths": ["*"] 
+            },
+            {
+                "appID": "1630958005.com.suez.tsme.app",
+                "paths": ["*"] 
             }
         ]
     }
