@@ -246,7 +246,7 @@
             if (navigator.userAgent.match(/Android/i)) {
                 alert("You are using android");
                 const url = "intent://abdelalitahiri.com/#Intent;scheme=https;package=com.suez.tsme;end";
-                window.location.replace(url);
+                window.location.replace({`${url}/mon-compte-en-ligne/mon-mode-de-paiement`});
             }
 
             //IOS
@@ -259,14 +259,14 @@
         function openInsta() {
             //Android
             if (navigator.userAgent.match(/Android/i)) {
-                alert("You are using android");
+                alert("You are using android My friend");
                 const url = "intent://instagram.com/#Intent;scheme=https;package=com.instagram.android;end";
                 window.location.replace(url);
             }
 
             //IOS
             if (navigator.userAgent.match(/iPhone/i)) {
-                alert("You are using IOS");
+                alert("You are using IOS My friend");
                 window.location.replace("instagram://");
             }
         }
