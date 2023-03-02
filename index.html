@@ -252,11 +252,17 @@
 
         function openInsta() {
             //Android
-            // const url = "intent://instagram.com/#Intent;scheme=https;package=com.instagram.android;end";
-            // window.location.replace(url);
+            if (navigator.userAgent.match(/Android/i)) {
+                alert("You are using android");
+                const url = "intent://instagram.com/#Intent;scheme=https;package=com.instagram.android;end";
+                window.location.replace(url);
+            }
 
             //IOS
-            window.location.replace("instagram://");
+            if(navigator.userAgent.match(/iPhone/i)) {
+                alert("You are using IOS");
+                window.location.replace("instagram://");
+            }
         }
     </script>
     <script src="js/script.js"></script>
