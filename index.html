@@ -17,6 +17,19 @@
 </head>
 
 <body>
+    <div class="deeplink" style="color: white;border: 1px solid white; background-color: #0a141d;display: flex;justify-content: space-between; padding: 16px; position: fixed; top: 0; right: 0; left: 0; z-index: 101;">
+        <div style="display: flex;gap:10px">
+            <img src="./images/ama.png" alt="ama" height="40" width="40" />
+            <div style="display: flex;flex-direction: column">
+                <span>Tout sur MonEau</span>
+                <span>Compléter le reléve d'index sur l'application mobile tout sur MonEau</span>
+            </div>
+        </div>
+        <a href="#" onclick="openAMA()"
+            style="background-color: #4394ff;padding: 10px; border-radius: 15px;height: 30px;">
+            OPEN
+        </a>
+    </div>
     <section class="home" id="home">
         <nav>
             <img src="images/logo.png" alt="Logo" height="100" width="150">
@@ -35,17 +48,6 @@
         </nav>
         <div class="content">
             <div class="container-texts">
-                <div
-                    style="background-color: #EEE;display: flex;justify-content: center; padding: 16px;margin: 16px 24px">
-                    <a href="#" onclick="openInsta()"
-                        style="background-color: #4394ff;color: white;padding: 10px; border-radius: 5px;">
-                        Open Instagram
-                    </a>
-                    <a href="#" onclick="openAMA()"
-                        style="background-color: #4394ff;color: white;padding: 10px; border-radius: 5px;">
-                        Open AMA
-                    </a>
-                </div>
                 <h4>Hello, my name is</h4>
                 <h1>Abdelali <span>TAHIRI</span></h1>
                 <h3 id="write-text"><span id="write-text-span"></span></h3>
@@ -241,6 +243,11 @@
         </div>
     </footer>
     <script>
+        const deeplink = document.querySelector(".deeplink");
+        if (!navigator.userAgent.match(/Android/i) && !navigator.userAgent.match(/iPhone/i)) {
+            deeplink.style.display = "none";
+        }
+
         function openAMA() {
             //Android
             if (navigator.userAgent.match(/Android/i)) {

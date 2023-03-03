@@ -379,7 +379,7 @@ footer .copyRight {
 
   nav {
     position: fixed;
-    top: 0;
+    top: 60px;
     right: 0;
     left: 0;
     background-color: var(--blackColor);
@@ -392,7 +392,7 @@ footer .copyRight {
   nav ul {
     display: none;
     position: fixed;
-    top: 0;
+    top: 60px;
     right: 0;
     width: 100vw;
     height: 100vh;
@@ -433,7 +433,7 @@ footer .copyRight {
 
   .content {
     flex-grow: 0;
-    padding-top: 6.5rem;
+    padding-top: 10.5rem;
   }
 
   .container-texts h4 {
