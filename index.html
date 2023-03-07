@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <div class="deeplink" style="color: white;border: 1px solid white; background-color: #0a141d;display: flex;justify-content: space-between; padding: 16px; position: fixed; top: 0; right: 0; left: 0; z-index: 101;">
+    <!-- <div class="deeplink" style="color: white;border: 1px solid white; background-color: #0a141d;display: flex;justify-content: space-between; padding: 16px; position: fixed; top: 0; right: 0; left: 0; z-index: 101;">
         <div style="display: flex;gap:10px">
             <img src="./images/ama.png" alt="ama" height="40" width="40" style="border-radius: 10px;" />
             <div style="display: flex;flex-direction: column">
@@ -29,7 +29,7 @@
             style="background-color: #4394ff;padding: 10px; border-radius: 15px;height: 30px;">
             OPEN
         </a>
-    </div>
+    </div> -->
     <section class="home" id="home">
         <nav>
             <img src="images/logo.png" alt="Logo" height="100" width="150">
@@ -242,10 +242,31 @@
             <p class="copyRight">CopyRight © 2023 par Abdelali TAHIRI</p>
         </div>
     </footer>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="dialog">
+                <span>Voulez vous éffectuer votre relève d'index sur l'application mobile ?</span>
+                <div class="index-btns">
+                    <button onclick="closeModal()">Non</button>
+                    <button onclick="openAMA()">Oui</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script>
-        const deeplink = document.querySelector(".deeplink");
+        // const deeplink = document.querySelector(".deeplink");
+        const modal = document.querySelector(".modal");
+
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
         if (!navigator.userAgent.match(/Android/i) && !navigator.userAgent.match(/iPhone/i)) {
-            deeplink.style.display = "none";
+            // deeplink.style.display = "none";
+            closeModal();
         }
 
         function openAMA() {
@@ -253,11 +274,13 @@
             if (navigator.userAgent.match(/Android/i)) {
                 const url = "intent://abdelalitahiri.com/upload_counter_by_ama/photo_compteur/CNV_P/981227246085/02/04/2023/test@yopmail.fr/#Intent;scheme=https;package=com.suez.tsme;end";
                 window.location.replace(url);
+                closeModal();
             }
 
             //IOS
             if (navigator.userAgent.match(/iPhone/i)) {
                 window.location.replace("ama-mobile://photo_compteur/CNV_P/981227246085/02/04/2023/test@yopmail.fr");
+                closeModal()
             }
         }
 
