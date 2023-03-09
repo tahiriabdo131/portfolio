@@ -8,5 +8,15 @@
         "FC:B1:A7:8B:A2:4A:18:C7:ED:DD:D8:08:60:9B:A7:57:88:67:08:C2:14:E0:12:58:19:18:E1:A2:F0:68:F4:7B"
       ]
     }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.suez.tsme",
+      "sha256_cert_fingerprints": [
+        "7B:4D:4D:FD:DA:B2:84:DB:94:3C:B2:C5:8A:27:28:5A:90:0D:09:C0:4C:07:0C:39:2B:2B:95:85:5D:62:96:E0"
+      ]
+    }
   }
 ]
