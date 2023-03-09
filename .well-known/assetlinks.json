@@ -13,16 +13,6 @@
     "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
       "namespace": "android_app",
-      "package_name": "com.suez.voyagoproject",
-      "sha256_cert_fingerprints": [
-        "D6:A8:B2:10:65:9F:6C:B3:08:BF:81:04:4A:CD:90:B7:4C:4D:1D:C5:F3:70:0A:91:CC:D5:DD:B0:AE:55:96:3E"
-      ]
-    }
-  },
-  {
-    "relation": ["delegate_permission/common.handle_all_urls"],
-    "target": {
-      "namespace": "android_app",
       "package_name": "com.suez.tsme",
       "sha256_cert_fingerprints": [
         "7B:4D:4D:FD:DA:B2:84:DB:94:3C:B2:C5:8A:27:28:5A:90:0D:09:C0:4C:07:0C:39:2B:2B:95:85:5D:62:96:E0"
