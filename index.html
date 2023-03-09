@@ -257,8 +257,15 @@
         </div>
     </div>
     <script>
-        console.log(window.location.href);
         // const deeplink = document.querySelector(".deeplink");
+        let params = new URLSearchParams(window.location.search);
+        const campaign = params.get('campaign');
+        const reference = params.get('reference');
+        const day = params.get('day');
+        const month = params.get('month');
+        const year = params.get('year');
+        const email = params.get('email');
+
         const modal = document.querySelector(".modal");
 
         function closeModal() {
@@ -273,14 +280,14 @@
         function openAMA() {
             //Android
             if (navigator.userAgent.match(/Android/i)) {
-                const url = "intent://abdelalitahiri.com/upload_counter_by_ama/photo_compteur/CNV_P/981227246085/02/04/2023/test@yopmail.fr/#Intent;scheme=https;package=com.suez.tsme;end";
+                const url = "intent://abdelalitahiri.com/upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email+"/#Intent;scheme=https;package=com.suez.tsme;end";
                 window.location.replace(url);
                 closeModal();
             }
 
             //IOS
             if (navigator.userAgent.match(/iPhone/i)) {
-                window.location.replace("ama-mobile://photo_compteur/CNV_P/981227246085/02/04/2023/test@yopmail.fr");
+                window.location.replace("ama-mobile://photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email);
                 closeModal()
             }
         }
