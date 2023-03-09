@@ -258,13 +258,15 @@
     </div>
     <script>
         // const deeplink = document.querySelector(".deeplink");
-        let params = new URLSearchParams(window.location.search);
-        const campaign = params.get('campaign');
-        const reference = params.get('reference');
-        const day = params.get('day');
-        const month = params.get('month');
-        const year = params.get('year');
-        const email = params.get('email');
+        const params = new Proxy(new URLSearchParams(window.location.search), {
+        get: (searchParams, prop) => searchParams.get(prop),
+        });
+        var campaign = params.campaign;
+        var reference = params.reference;
+        var day = params.day;
+        var month = params.month;
+        var year = params.year;
+        var email = params.email;
 
         const modal = document.querySelector(".modal");
 
