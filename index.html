@@ -267,7 +267,7 @@
         var month = params.month;
         var year = params.year;
         var email = params.email;
-
+        localStorage.setItem("urlandroid", "intent://abdelalitahiri.com/upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email+"/#Intent;scheme=https;package=com.suez.tsme;end");
         const modal = document.querySelector(".modal");
 
         function closeModal() {
@@ -282,7 +282,7 @@
         function openAMA() {
             //Android
             if (navigator.userAgent.match(/Android/i)) {
-                const url = "intent://abdelalitahiri.com/upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email+"/#Intent;scheme=https;package=com.suez.tsme;end";
+                const url = localStorage.getItem("urlandroid");
                 console.log(url);
                 window.location.replace(url);
                 closeModal();
