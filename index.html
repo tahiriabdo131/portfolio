@@ -268,6 +268,7 @@
         var year = params.year;
         var email = params.email;
         localStorage.setItem("urlandroid", "intent://abdelalitahiri.com/upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email+"/#Intent;scheme=https;package=com.suez.tsme;end");
+        localStorage.setItem("urlios", "ama-mobile://photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email);
         const modal = document.querySelector(".modal");
 
         function closeModal() {
@@ -283,14 +284,16 @@
             //Android
             if (navigator.userAgent.match(/Android/i)) {
                 const url = localStorage.getItem("urlandroid");
-                console.log(url);
+                console.log("urlAndroid", url);
                 window.location.replace(url);
                 closeModal();
             }
 
             //IOS
             if (navigator.userAgent.match(/iPhone/i)) {
-                window.location.replace("ama-mobile://photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email);
+                const urlIos = localStorage.getItem("urlIos");
+                console.log("iphoneUrl", urlIos);
+                window.location.replace(urlIos);
                 closeModal()
             }
         }
