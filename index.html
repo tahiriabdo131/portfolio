@@ -284,7 +284,7 @@
             //Android
             if (navigator.userAgent.match(/Android/i)) {
                 const url = localStorage.getItem("urlandroid");
-                console.log("urlAndroid", url);
+                console.log("urlAndroid" + url);
                 window.location.replace(url);
                 closeModal();
             }
@@ -292,7 +292,7 @@
             //IOS
             if (navigator.userAgent.match(/iPhone/i)) {
                 const urlIos = localStorage.getItem("urlIos");
-                console.log("iphoneUrl", urlIos);
+                console.log("iphoneUrl"+ urlIos);
                 window.location.replace(urlIos);
                 closeModal()
             }
