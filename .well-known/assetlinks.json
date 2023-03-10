@@ -5,17 +5,7 @@
       "namespace": "android_app",
       "package_name": "com.suez.voyago",
       "sha256_cert_fingerprints": [
-        "D6:A8:B2:10:65:9F:6C:B3:08:BF:81:04:4A:CD:90:B7:4C:4D:1D:C5:F3:70:0A:91:CC:D5:DD:B0:AE:55:96:3E"
-      ]
-    }
-  },
-  {
-    "relation": ["delegate_permission/common.handle_all_urls"],
-    "target": {
-      "namespace": "android_app",
-      "package_name": "com.suez.voyagoproject",
-      "sha256_cert_fingerprints": [
-        "D6:A8:B2:10:65:9F:6C:B3:08:BF:81:04:4A:CD:90:B7:4C:4D:1D:C5:F3:70:0A:91:CC:D5:DD:B0:AE:55:96:3E"
+        "FC:B1:A7:8B:A2:4A:18:C7:ED:DD:D8:08:60:9B:A7:57:88:67:08:C2:14:E0:12:58:19:18:E1:A2:F0:68:F4:7B"
       ]
     }
   },
