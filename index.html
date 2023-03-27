@@ -271,8 +271,8 @@
             var email = params.email;
             localStorage.setItem("urlandroid", "intent://abdelalitahiri.com/upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email+"#Intent;scheme=https;package=com.suez.tsme;end");
             localStorage.setItem("urlios", "ama-mobile://upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email);
-            var element = document.getElementById("#urlios");
-            element.value= "ama-mobile://upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email;
+            //var element = document.getElementById("#urlios");
+            //element.value= "ama-mobile://upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email;
             const modal = document.querySelector(".modal");
 
             function closeModal() {
@@ -296,6 +296,7 @@
                 //IOS
                 if (navigator.userAgent.match(/iPhone/i)) {
                     const urlIos = localStorage.getItem("urlios");
+                    alert(urlIos);
                     console.log("iphoneUrl"+ urlIos);
                     window.location.replace(urlIos);
                     closeModal()
