@@ -258,61 +258,63 @@
         </div>
     </div>
     <script>
-        // const deeplink = document.querySelector(".deeplink");
-        const params = new Proxy(new URLSearchParams(window.location.search), {
-        get: (searchParams, prop) => searchParams.get(prop),
-        });
-        var campaign = params.campaign;
-        var reference = params.reference;
-        var day = params.day;
-        var month = params.month;
-        var year = params.year;
-        var email = params.email;
-        localStorage.setItem("urlandroid", "intent://abdelalitahiri.com/upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email+"#Intent;scheme=https;package=com.suez.tsme;end");
-        localStorage.setItem("urlios", "ama-mobile://upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email);
-        var element = document.getElementById("#urlios");
-        element.value= "ama-mobile://upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email;
-        const modal = document.querySelector(".modal");
+        $(document).ready(function() {
+            // const deeplink = document.querySelector(".deeplink");
+            const params = new Proxy(new URLSearchParams(window.location.search), {
+            get: (searchParams, prop) => searchParams.get(prop),
+            });
+            var campaign = params.campaign;
+            var reference = params.reference;
+            var day = params.day;
+            var month = params.month;
+            var year = params.year;
+            var email = params.email;
+            localStorage.setItem("urlandroid", "intent://abdelalitahiri.com/upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email+"#Intent;scheme=https;package=com.suez.tsme;end");
+            localStorage.setItem("urlios", "ama-mobile://upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email);
+            var element = document.getElementById("#urlios");
+            element.value= "ama-mobile://upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email;
+            const modal = document.querySelector(".modal");
 
-        function closeModal() {
-            modal.style.display = "none";
-        }
+            function closeModal() {
+                modal.style.display = "none";
+            }
 
-        if (!navigator.userAgent.match(/Android/i) && !navigator.userAgent.match(/iPhone/i)) {
-            // deeplink.style.display = "none";
-            closeModal();
-        }
-
-        function openAMA() {
-            //Android
-            if (navigator.userAgent.match(/Android/i)) {
-                const url = localStorage.getItem("urlandroid");
-                console.log("urlAndroid" + url);
-                window.location.replace(url);
+            if (!navigator.userAgent.match(/Android/i) && !navigator.userAgent.match(/iPhone/i)) {
+                // deeplink.style.display = "none";
                 closeModal();
             }
 
-            //IOS
-            if (navigator.userAgent.match(/iPhone/i)) {
-                const urlIos = localStorage.getItem("urlios");
-                console.log("iphoneUrl"+ urlIos);
-                window.location.replace(urlIos);
-                closeModal()
-            }
-        }
+            function openAMA() {
+                //Android
+                if (navigator.userAgent.match(/Android/i)) {
+                    const url = localStorage.getItem("urlandroid");
+                    console.log("urlAndroid" + url);
+                    window.location.replace(url);
+                    closeModal();
+                }
 
-        function openInsta() {
-            //Android
-            if (navigator.userAgent.match(/Android/i)) {
-                const url = "intent://instagram.com/#Intent;scheme=https;package=com.instagram.android;end";
-                window.location.replace(url);
+                //IOS
+                if (navigator.userAgent.match(/iPhone/i)) {
+                    const urlIos = localStorage.getItem("urlios");
+                    console.log("iphoneUrl"+ urlIos);
+                    window.location.replace(urlIos);
+                    closeModal()
+                }
             }
 
-            //IOS
-            if (navigator.userAgent.match(/iPhone/i)) {
-                window.location.replace("instagram://");
+            function openInsta() {
+                //Android
+                if (navigator.userAgent.match(/Android/i)) {
+                    const url = "intent://instagram.com/#Intent;scheme=https;package=com.instagram.android;end";
+                    window.location.replace(url);
+                }
+
+                //IOS
+                if (navigator.userAgent.match(/iPhone/i)) {
+                    window.location.replace("instagram://");
+                }
             }
-        }
+        });
     </script>
     <script src="js/script.js"></script>
 </body>
