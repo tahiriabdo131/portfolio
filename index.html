@@ -258,7 +258,7 @@
         </div>
     </div>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        // document.addEventListener("DOMContentLoaded", function() {
             // const deeplink = document.querySelector(".deeplink");
             const params = new Proxy(new URLSearchParams(window.location.search), {
             get: (searchParams, prop) => searchParams.get(prop),
@@ -315,7 +315,7 @@
                     window.location.replace("instagram://");
                 }
             }
-        });
+        // });
     </script>
     <script src="js/script.js"></script>
 </body>
