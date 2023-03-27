@@ -271,7 +271,7 @@
         localStorage.setItem("urlandroid", "intent://abdelalitahiri.com/upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email+"#Intent;scheme=https;package=com.suez.tsme;end");
         localStorage.setItem("urlios", "ama-mobile://upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email);
         var element = document.getElementById("#urlios");
-        element.textContent = "ama-mobile://upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email;
+        element.value= "ama-mobile://upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email;
         const modal = document.querySelector(".modal");
 
         function closeModal() {
