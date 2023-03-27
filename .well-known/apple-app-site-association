@@ -21,3 +21,23 @@
         ]
     }
 }
+
+
+{
+    "applinks": {
+        "details": [
+             {
+               "appIDs": [ "1619110692.com.suez.tsme" ],
+               "components": [
+                 {
+                    "/": "/upload_counter_by_ama/*",
+                    "comment": "Matches any URL with a path that starts with /buy/."
+                 },
+               ]
+             }
+         ]
+     },
+     "webcredentials": {
+        "apps": [ "1619110692.com.suez.tsme" ]
+     },
+  }
