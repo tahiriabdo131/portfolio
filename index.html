@@ -326,9 +326,10 @@
 
         var linker = new DeepLinker({
         onIgnored: function() {
+            window.location = "https://www.facebook.com";
         },
         onFallback: function() {
-            alert('dialog hidden or user returned to tab');
+            // alert('dialog hidden or user returned to tab');
             window.location = "https://www.facebook.com";
         },
         onReturn: function() {
