@@ -326,10 +326,9 @@
 
         var linker = new DeepLinker({
         onIgnored: function() {
-            alert("vous allez être redirigé vers une autre url, package not found");
         },
         onFallback: function() {
-            console.log('dialog hidden or user returned to tab');
+            alert('dialog hidden or user returned to tab');
             window.location = "https://www.facebook.com";
         },
         onReturn: function() {
