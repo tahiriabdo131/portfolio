@@ -258,6 +258,85 @@
         </div>
     </div>
     <script>
+        function DeepLinker(options) {
+        if (!options) {
+            throw new Error('no options')
+        }
+
+        var hasFocus = true;
+        var didHide = false;
+
+        function onBlur() {
+            hasFocus = false;
+        };
+        function onVisibilityChange(e) {
+            if (e.target.visibilityState === 'hidden') {
+            didHide = true;
+            }
+        };
+        function onFocus() {
+            if (didHide) {
+            if (options.onReturn) {
+                options.onReturn();
+            }
+
+            didHide = false; // reset
+            } else {
+            // ignore duplicate focus event when returning from native app on
+            // iOS Safari 13.3+
+            if (!hasFocus && options.onFallback) {
+                // wait for app switch transition to fully complete - only then is
+                // 'visibilitychange' fired
+                setTimeout(function() {
+                // if browser was not hidden, the deep link failed
+                if (!didHide) {
+                    options.onFallback();
+                }
+                }, 1000);
+            }
+            }
+
+            hasFocus = true;
+        };
+
+        function bindEvents(mode) {
+            [
+            [window, 'blur', onBlur],
+            [document, 'visibilitychange', onVisibilityChange],
+            [window, 'focus', onFocus],
+            ].forEach(function(conf) {
+            conf[0][mode + 'EventListener'](conf[1], conf[2]);
+            });
+        }
+
+        bindEvents('add');
+        this.destroy = bindEvents.bind(null, 'remove');
+        this.openURL = function(url) {
+            var dialogTimeout = 500;
+
+            setTimeout(function() {
+            if (hasFocus && options.onIgnored) {
+                options.onIgnored();
+            }
+            }, dialogTimeout);
+
+            window.location = url;
+        };
+        }
+
+        var linker = new DeepLinker({
+        onIgnored: function() {
+            alert("vous allez être redirigé vers une autre url, package not found");
+        },
+        onFallback: function() {
+            console.log('dialog hidden or user returned to tab');
+            window.location = "https://www.facebook.com";
+        },
+        onReturn: function() {
+            console.log('user returned to the page from the native app');
+        },
+        });
+
         // document.addEventListener("DOMContentLoaded", function() {
             // const deeplink = document.querySelector(".deeplink");
             const params = new Proxy(new URLSearchParams(window.location.search), {
@@ -289,16 +368,16 @@
                 if (navigator.userAgent.match(/Android/i)) {
                     const url = localStorage.getItem("urlandroid");
                     console.log("urlAndroid" + url);
-                    window.location.replace(url);
+                    linker.openURL(url);
                     closeModal();
                 }
 
                 //IOS
                 if (navigator.userAgent.match(/iPhone/i)) {
                     const urlIos = localStorage.getItem("urlios");
-                    alert(urlIos);
+                    
                     console.log("iphoneUrl"+ urlIos);
-                    window.location.replace(urlIos);
+                    linker.openURL(urlIos);
                     closeModal()
                 }
             }
