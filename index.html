@@ -353,48 +353,48 @@
             localStorage.setItem("urlios", "com.suez.tsme://upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email);
             //var element = document.getElementById("#urlios");
             //element.value= "ama-mobile://upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email;
-            const modal = document.querySelector(".modal");
+            // const modal = document.querySelector(".modal");
 
-            function closeModal() {
-                modal.style.display = "none";
-            }
+            // function closeModal() {
+            //     modal.style.display = "none";
+            // }
 
-            if (!navigator.userAgent.match(/Android/i) && !navigator.userAgent.match(/iPhone/i)) {
-                // deeplink.style.display = "none";
-                closeModal();
-            }
+            // if (!navigator.userAgent.match(/Android/i) && !navigator.userAgent.match(/iPhone/i)) {
+            //     // deeplink.style.display = "none";
+            //     closeModal();
+            // }
 
-            function openAMA() {
-                //Android
-                if (navigator.userAgent.match(/Android/i)) {
-                    const url = localStorage.getItem("urlandroid");
-                    console.log("urlAndroid" + url);
-                    linker.openURL(url);
-                    closeModal();
-                }
+            // function openAMA() {
+            //     //Android
+            //     if (navigator.userAgent.match(/Android/i)) {
+            //         const url = localStorage.getItem("urlandroid");
+            //         console.log("urlAndroid" + url);
+            //         linker.openURL(url);
+            //         closeModal();
+            //     }
 
-                //IOS
-                if (navigator.userAgent.match(/iPhone/i)) {
-                    const urlIos = localStorage.getItem("urlios");
+            //     //IOS
+            //     if (navigator.userAgent.match(/iPhone/i)) {
+            //         const urlIos = localStorage.getItem("urlios");
                     
-                    console.log("iphoneUrl"+ urlIos);
-                    linker.openURL(urlIos);
-                    closeModal()
-                }
-            }
+            //         console.log("iphoneUrl"+ urlIos);
+            //         linker.openURL(urlIos);
+            //         closeModal()
+            //     }
+            // }
 
-            function openInsta() {
-                //Android
-                if (navigator.userAgent.match(/Android/i)) {
-                    const url = "intent://instagram.com/#Intent;scheme=https;package=com.instagram.android;end";
-                    window.location.replace(url);
-                }
+            // function openInsta() {
+            //     //Android
+            //     if (navigator.userAgent.match(/Android/i)) {
+            //         const url = "intent://instagram.com/#Intent;scheme=https;package=com.instagram.android;end";
+            //         window.location.replace(url);
+            //     }
 
-                //IOS
-                if (navigator.userAgent.match(/iPhone/i)) {
-                    window.location.replace("instagram://");
-                }
-            }
+            //     //IOS
+            //     if (navigator.userAgent.match(/iPhone/i)) {
+            //         window.location.replace("instagram://");
+            //     }
+            // }
         // });
     </script>
 
