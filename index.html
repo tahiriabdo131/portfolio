@@ -326,12 +326,11 @@
 
         var linker = new DeepLinker({
         onIgnored: function() {
-            alert("onIgnored");
-            //window.location = "https://www.facebook.com";
+            // alert("onIgnored");
+            window.location = "https://www.facebook.com";
         },
         onFallback: function() {
-            alert("fallback");
-            // window.location = "https://www.facebook.com";
+            window.location = "https://www.facebook.com";
         },
         onReturn: function() {
             alert("onReturn");
