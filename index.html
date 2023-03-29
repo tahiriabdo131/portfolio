@@ -448,34 +448,34 @@
 //     */
 
 //   })();
-(function(){
-const params = new Proxy(new URLSearchParams(window.location.search), {
-            get: (searchParams, prop) => searchParams.get(prop),
-            });
-            var campaign = params.campaign;
-            var reference = params.reference;
-            var day = params.day;
-            var month = params.month;
-            var year = params.year;
-            var email = params.email;
-var deeplinkUrl = "https://abdelalitahiri.com/upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email;
-//variable will check app installed or not
-var change = false;
-setTimeout(() => {
-  if (!change) {
-    var redirectUrl = "your store url";
-    window.location = "https://abdelalitahiri.com";
-  }
-}, 3000);
-window.location = deeplinkUrl;
-//handle event to check app installed or not
-window.onblur = function () {
-    change = true;
-};
-window.onfocus = function(){
-    change = false;
-}
-})();
+// (function(){
+// const params = new Proxy(new URLSearchParams(window.location.search), {
+//             get: (searchParams, prop) => searchParams.get(prop),
+//             });
+//             var campaign = params.campaign;
+//             var reference = params.reference;
+//             var day = params.day;
+//             var month = params.month;
+//             var year = params.year;
+//             var email = params.email;
+// var deeplinkUrl = "https://abdelalitahiri.com/upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email;
+// //variable will check app installed or not
+// var change = false;
+// setTimeout(() => {
+//   if (!change) {
+//     var redirectUrl = "your store url";
+//     window.location = "https://abdelalitahiri.com";
+//   }
+// }, 3000);
+// window.location = deeplinkUrl;
+// //handle event to check app installed or not
+// window.onblur = function () {
+//     change = true;
+// };
+// window.onfocus = function(){
+//     change = false;
+// }
+// })();
 </script>
 
     <script src="js/script.js"></script>
