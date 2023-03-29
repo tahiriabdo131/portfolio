@@ -370,6 +370,7 @@
                     const url = localStorage.getItem("urlandroid");
                     console.log("urlAndroid" + url);
                     linker.openURL(url).catch((e) => {
+                        closeModal();
                         alert("ceci est l'erreur");
                     });
                     closeModal();
@@ -380,9 +381,10 @@
                     const urlIos = localStorage.getItem("urlios");
                     console.log("iphoneUrl"+ urlIos);
                     linker.openURL(urlIos).catch((e) => {
+                        closeModal();
                         alert("ceci est l'erreur");
                     });
-                    closeModal()
+                    
                 }
             }
 
