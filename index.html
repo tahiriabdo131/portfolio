@@ -353,9 +353,11 @@
             localStorage.setItem("urlios", "com.suez.tsme://upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email);
             //var element = document.getElementById("#urlios");
             //element.value= "ama-mobile://upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email;
-            // const modal = document.querySelector(".modal");
+            const modal = document.querySelector(".modal");
 
-            
+            function closeModal() {
+                modal.style.display = "none";
+            }
 
             if (!navigator.userAgent.match(/Android/i) && !navigator.userAgent.match(/iPhone/i)) {
                 // deeplink.style.display = "none";
