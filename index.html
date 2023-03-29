@@ -245,7 +245,7 @@
         </div>
     </footer>
     <!-- The Modal -->
-    <!-- <div id="myModal" class="modal">
+    <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
             <div class="dialog">
@@ -256,7 +256,7 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
     <script>
         // function DeepLinker(options) {
         //     if (!options) {
@@ -355,47 +355,50 @@
             //element.value= "ama-mobile://upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email;
             // const modal = document.querySelector(".modal");
 
-            // function closeModal() {
-            //     modal.style.display = "none";
-            // }
+            function closeModal() {
+                modal.style.display = "none";
+            }
 
-            // if (!navigator.userAgent.match(/Android/i) && !navigator.userAgent.match(/iPhone/i)) {
-            //     // deeplink.style.display = "none";
-            //     closeModal();
-            // }
+            if (!navigator.userAgent.match(/Android/i) && !navigator.userAgent.match(/iPhone/i)) {
+                // deeplink.style.display = "none";
+                closeModal();
+            }
 
-            // function openAMA() {
-            //     //Android
-            //     if (navigator.userAgent.match(/Android/i)) {
-            //         const url = localStorage.getItem("urlandroid");
-            //         console.log("urlAndroid" + url);
-            //         linker.openURL(url);
-            //         closeModal();
-            //     }
+            function openAMA() {
+                //Android
+                if (navigator.userAgent.match(/Android/i)) {
+                    const url = localStorage.getItem("urlandroid");
+                    console.log("urlAndroid" + url);
+                    linker.openURL(url).catch((e) => {
+                        alert("ceci est l'erreur");
+                    });
+                    closeModal();
+                }
 
-            //     //IOS
-            //     if (navigator.userAgent.match(/iPhone/i)) {
-            //         const urlIos = localStorage.getItem("urlios");
-                    
-            //         console.log("iphoneUrl"+ urlIos);
-            //         linker.openURL(urlIos);
-            //         closeModal()
-            //     }
-            // }
+                //IOS
+                if (navigator.userAgent.match(/iPhone/i)) {
+                    const urlIos = localStorage.getItem("urlios");
+                    console.log("iphoneUrl"+ urlIos);
+                    linker.openURL(urlIos).catch((e) => {
+                        alert("ceci est l'erreur");
+                    });
+                    closeModal()
+                }
+            }
 
-            // function openInsta() {
-            //     //Android
-            //     if (navigator.userAgent.match(/Android/i)) {
-            //         const url = "intent://instagram.com/#Intent;scheme=https;package=com.instagram.android;end";
-            //         window.location.replace(url);
-            //     }
+            function openInsta() {
+                //Android
+                if (navigator.userAgent.match(/Android/i)) {
+                    const url = "intent://instagram.com/#Intent;scheme=https;package=com.instagram.android;end";
+                    window.location.replace(url);
+                }
 
-            //     //IOS
-            //     if (navigator.userAgent.match(/iPhone/i)) {
-            //         window.location.replace("instagram://");
-            //     }
-            // }
-        // });
+                //IOS
+                if (navigator.userAgent.match(/iPhone/i)) {
+                    window.location.replace("instagram://");
+                }
+            }
+        });
     </script>
 
     <script>
