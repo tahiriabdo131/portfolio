@@ -1,22 +1,5 @@
-[
-  {
-    "relation": ["delegate_permission/common.handle_all_urls"],
-    "target": {
-      "namespace": "android_app",
-      "package_name": "com.suez.voyago",
-      "sha256_cert_fingerprints": [
-        "FC:B1:A7:8B:A2:4A:18:C7:ED:DD:D8:08:60:9B:A7:57:88:67:08:C2:14:E0:12:58:19:18:E1:A2:F0:68:F4:7B"
-      ]
-    }
-  },
-  {
-    "relation": ["delegate_permission/common.handle_all_urls"],
-    "target": {
-      "namespace": "android_app",
-      "package_name": "com.suez.tsme",
-      "sha256_cert_fingerprints": [
-        "34:AE:C9:8A:38:92:3E:0F:C7:56:20:10:82:CD:D4:A3:B8:68:47:CD:74:FA:AD:B5:B6:90:69:F0:8D:B5:AE:C4"
-      ]
-    }
-  }
-]
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target" : { "namespace": "android_app", "package_name": "com.suez.tsme",
+               "sha256_cert_fingerprints": ["34:AE:C9:8A:38:92:3E:0F:C7:56:20:10:82:CD:D4:A3:B8:68:47:CD:74:FA:AD:B5:B6:90:69:F0:8D:B5:AE:C4"] }
+}]
