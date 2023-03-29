@@ -409,7 +409,7 @@
         var year = params.year;
         var email = params.email;
         // For desktop browser, remember to pass though any metadata on the link for deep linking
-        var fallbackLink = "https://facebook.com";
+        var fallbackLink = "com.suez.tsme://upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email;
 
         // Simple device detection
         var isiOS = navigator.userAgent.match('iPad') || navigator.userAgent.match('iPhone') || navigator.userAgent.match('iPod'),
@@ -425,7 +425,7 @@
         // load both URLs and only the last one will win. (Especially FireFox, where an "Are You Sure" dialog will appear)
         // on iOS we can link directly to the App Store as our app switch will fire prior to the switch
         // If you have a mobile web app, your fallback could be that instead. 
-        fallbackLink = "com.suez.tsme://upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email;
+        fallbackLink = "www.facebook.com";
         }
 
         // Now we just wait for everything to execute, if the user is redirected to your custom app
@@ -434,8 +434,8 @@
         
 
         window.setTimeout(function (){ window.location.replace(fallbackLink); }, 1);
-        alert("Veuillez patientez, Vous allez être redirigé...");
-        window.setTimeout(function (){ window.location = "www.facebook.com"; }, 3000);
+        // alert("Veuillez patientez, Vous allez être redirigé...");
+        // window.setTimeout(function (){ window.location = "www.facebook.com"; }, 3000);
 
         /*
         Q&A
