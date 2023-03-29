@@ -257,150 +257,150 @@
             </div>
         </div>
     </div> -->
-    <!-- <script>
-        function DeepLinker(options) {
-            if (!options) {
-                throw new Error('no options')
-            }
+    <script>
+        // function DeepLinker(options) {
+        //     if (!options) {
+        //         throw new Error('no options')
+        //     }
 
-            var hasFocus = true;
-            var didHide = false;
+        //     var hasFocus = true;
+        //     var didHide = false;
 
-            function onBlur() {
-                hasFocus = false;
-            };
-            function onVisibilityChange(e) {
-                if (e.target.visibilityState === 'hidden') {
-                    didHide = true;
-                }
-            };
-            function onFocus() {
-                if (didHide) {
-                    if (options.onReturn) {
-                        options.onReturn();
-                    }
+        //     function onBlur() {
+        //         hasFocus = false;
+        //     };
+        //     function onVisibilityChange(e) {
+        //         if (e.target.visibilityState === 'hidden') {
+        //             didHide = true;
+        //         }
+        //     };
+        //     function onFocus() {
+        //         if (didHide) {
+        //             if (options.onReturn) {
+        //                 options.onReturn();
+        //             }
 
-                    didHide = false; // reset
-                } else {
-                // ignore duplicate focus event when returning from native app on
-                // iOS Safari 13.3+
-                    if (!hasFocus && options.onFallback) {
-                        // wait for app switch transition to fully complete - only then is
-                        // 'visibilitychange' fired
-                        setTimeout(function() {
-                            // if browser was not hidden, the deep link failed
-                            if (!didHide) {
-                                options.onFallback();
-                            }
-                        }, 1000);
-                    }
+        //             didHide = false; // reset
+        //         } else {
+        //         // ignore duplicate focus event when returning from native app on
+        //         // iOS Safari 13.3+
+        //             if (!hasFocus && options.onFallback) {
+        //                 // wait for app switch transition to fully complete - only then is
+        //                 // 'visibilitychange' fired
+        //                 setTimeout(function() {
+        //                     // if browser was not hidden, the deep link failed
+        //                     if (!didHide) {
+        //                         options.onFallback();
+        //                     }
+        //                 }, 1000);
+        //             }
 
-                    hasFocus = true;
-                }
-            };
+        //             hasFocus = true;
+        //         }
+        //     };
 
-            function bindEvents(mode) {
-                [
-                [window, 'blur', onBlur],
-                [document, 'visibilitychange', onVisibilityChange],
-                [window, 'focus', onFocus],
-                ].forEach(function(conf) {
-                conf[0][mode + 'EventListener'](conf[1], conf[2]);
-                });
-            }
+        //     function bindEvents(mode) {
+        //         [
+        //         [window, 'blur', onBlur],
+        //         [document, 'visibilitychange', onVisibilityChange],
+        //         [window, 'focus', onFocus],
+        //         ].forEach(function(conf) {
+        //         conf[0][mode + 'EventListener'](conf[1], conf[2]);
+        //         });
+        //     }
 
-            bindEvents('add');
-            this.destroy = bindEvents.bind(null, 'remove');
-            this.openURL = function(url) {
-                var dialogTimeout = 500;
+        //     bindEvents('add');
+        //     this.destroy = bindEvents.bind(null, 'remove');
+        //     this.openURL = function(url) {
+        //         var dialogTimeout = 500;
 
-                setTimeout(function() {
-                if (hasFocus && options.onIgnored) {
-                    options.onIgnored();
-                }
-                }, dialogTimeout);
+        //         setTimeout(function() {
+        //         if (hasFocus && options.onIgnored) {
+        //             options.onIgnored();
+        //         }
+        //         }, dialogTimeout);
 
-                window.location = url;
-            };
-        }
+        //         window.location = url;
+        //     };
+        // }
 
-        var linker = new DeepLinker({
-            onIgnored: function() {
-                //  alert("onIgnored");
-                //window.location = "https://www.facebook.com";
-            },
-            onFallback: function() {
-                // alert("onFallback");
-                //window.location = "https://www.facebook.com";
-            },
-            onReturn: function() {
-                // alert("onReturn");
-            },
-        });
+        // var linker = new DeepLinker({
+        //     onIgnored: function() {
+        //         //  alert("onIgnored");
+        //         //window.location = "https://www.facebook.com";
+        //     },
+        //     onFallback: function() {
+        //         // alert("onFallback");
+        //         //window.location = "https://www.facebook.com";
+        //     },
+        //     onReturn: function() {
+        //         // alert("onReturn");
+        //     },
+        // });
 
-        // document.addEventListener("DOMContentLoaded", function() {
-            // const deeplink = document.querySelector(".deeplink");
-            const params = new Proxy(new URLSearchParams(window.location.search), {
-            get: (searchParams, prop) => searchParams.get(prop),
-            });
-            var campaign = params.campaign;
-            var reference = params.reference;
-            var day = params.day;
-            var month = params.month;
-            var year = params.year;
-            var email = params.email;
-            localStorage.setItem("urlandroid", "intent://abdelalitahiri.com/upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email+"#Intent;scheme=https;package=com.suez.tsme;end");
-            localStorage.setItem("urlios", "com.suez.tsme://upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email);
-            //var element = document.getElementById("#urlios");
-            //element.value= "ama-mobile://upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email;
-            const modal = document.querySelector(".modal");
+        // // document.addEventListener("DOMContentLoaded", function() {
+        //     // const deeplink = document.querySelector(".deeplink");
+        //     const params = new Proxy(new URLSearchParams(window.location.search), {
+        //     get: (searchParams, prop) => searchParams.get(prop),
+        //     });
+        //     var campaign = params.campaign;
+        //     var reference = params.reference;
+        //     var day = params.day;
+        //     var month = params.month;
+        //     var year = params.year;
+        //     var email = params.email;
+        //     localStorage.setItem("urlandroid", "intent://abdelalitahiri.com/upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email+"#Intent;scheme=https;package=com.suez.tsme;end");
+        //     localStorage.setItem("urlios", "com.suez.tsme://upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email);
+        //     //var element = document.getElementById("#urlios");
+        //     //element.value= "ama-mobile://upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email;
+        //     const modal = document.querySelector(".modal");
 
-            function closeModal() {
-                modal.style.display = "none";
-            }
+        //     function closeModal() {
+        //         modal.style.display = "none";
+        //     }
 
-            if (!navigator.userAgent.match(/Android/i) && !navigator.userAgent.match(/iPhone/i)) {
-                // deeplink.style.display = "none";
-                closeModal();
-            }
+        //     if (!navigator.userAgent.match(/Android/i) && !navigator.userAgent.match(/iPhone/i)) {
+        //         // deeplink.style.display = "none";
+        //         closeModal();
+        //     }
 
-            function openAMA() {
-                //Android
-                if (navigator.userAgent.match(/Android/i)) {
-                    const url = localStorage.getItem("urlandroid");
-                    console.log("urlAndroid" + url);
-                    linker.openURL(url).catch((e) => {
-                        closeModal();
-                        alert("ceci est l'erreur");
-                    });
-                    closeModal();
-                }
+        //     function openAMA() {
+        //         //Android
+        //         if (navigator.userAgent.match(/Android/i)) {
+        //             const url = localStorage.getItem("urlandroid");
+        //             console.log("urlAndroid" + url);
+        //             linker.openURL(url).catch((e) => {
+        //                 closeModal();
+        //                 alert("ceci est l'erreur");
+        //             });
+        //             closeModal();
+        //         }
 
-                //IOS
-                if (navigator.userAgent.match(/iPhone/i)) {
-                    const urlIos = localStorage.getItem("urlios");
-                    console.log("iphoneUrl"+ urlIos);
-                    linker.openURL(urlIos).catch((e) => {
-                        closeModal();
-                        alert("ceci est l'erreur");
-                    });
+        //         //IOS
+        //         if (navigator.userAgent.match(/iPhone/i)) {
+        //             const urlIos = localStorage.getItem("urlios");
+        //             console.log("iphoneUrl"+ urlIos);
+        //             linker.openURL(urlIos).catch((e) => {
+        //                 closeModal();
+        //                 alert("ceci est l'erreur");
+        //             });
                     
-                }
-            }
+        //         }
+        //     }
 
-            function openInsta() {
-                //Android
-                if (navigator.userAgent.match(/Android/i)) {
-                    const url = "intent://instagram.com/#Intent;scheme=https;package=com.instagram.android;end";
-                    window.location.replace(url);
-                }
+        //     function openInsta() {
+        //         //Android
+        //         if (navigator.userAgent.match(/Android/i)) {
+        //             const url = "intent://instagram.com/#Intent;scheme=https;package=com.instagram.android;end";
+        //             window.location.replace(url);
+        //         }
 
-                //IOS
-                if (navigator.userAgent.match(/iPhone/i)) {
-                    window.location.replace("instagram://");
-                }
-            }
-    </script> -->
+        //         //IOS
+        //         if (navigator.userAgent.match(/iPhone/i)) {
+        //             window.location.replace("instagram://");
+        //         }
+        //     }
+    </script> 
 
 <script>(function(){
     const params = new Proxy(new URLSearchParams(window.location.search), {
