@@ -271,31 +271,32 @@
             };
             function onVisibilityChange(e) {
                 if (e.target.visibilityState === 'hidden') {
-                didHide = true;
+                    didHide = true;
                 }
             };
             function onFocus() {
                 if (didHide) {
-                if (options.onReturn) {
-                    options.onReturn();
-                }
+                    if (options.onReturn) {
+                        options.onReturn();
+                    }
 
-                didHide = false; // reset
+                    didHide = false; // reset
                 } else {
                 // ignore duplicate focus event when returning from native app on
                 // iOS Safari 13.3+
-                if (!hasFocus && options.onFallback) {
-                    // wait for app switch transition to fully complete - only then is
-                    // 'visibilitychange' fired
-                    setTimeout(function() {
-                    // if browser was not hidden, the deep link failed
-                    if (!didHide) {
-                        options.onFallback();
+                    if (!hasFocus && options.onFallback) {
+                        // wait for app switch transition to fully complete - only then is
+                        // 'visibilitychange' fired
+                        setTimeout(function() {
+                            // if browser was not hidden, the deep link failed
+                            if (!didHide) {
+                                options.onFallback();
+                            }
+                        }, 1000);
                     }
-                    }, 1000);
-                }
 
-                hasFocus = true;
+                    hasFocus = true;
+                }
             };
 
             function bindEvents(mode) {
@@ -324,17 +325,17 @@
         }
 
         var linker = new DeepLinker({
-        onIgnored: function() {
-            //  alert("onIgnored");
-            //window.location = "https://www.facebook.com";
-        },
-        onFallback: function() {
-            // alert("onFallback");
-            //window.location = "https://www.facebook.com";
-        },
-        onReturn: function() {
-            // alert("onReturn");
-        },
+            onIgnored: function() {
+                //  alert("onIgnored");
+                //window.location = "https://www.facebook.com";
+            },
+            onFallback: function() {
+                // alert("onFallback");
+                //window.location = "https://www.facebook.com";
+            },
+            onReturn: function() {
+                // alert("onReturn");
+            },
         });
 
         // document.addEventListener("DOMContentLoaded", function() {
@@ -354,9 +355,7 @@
             //element.value= "ama-mobile://upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email;
             // const modal = document.querySelector(".modal");
 
-            function closeModal() {
-                modal.style.display = "none";
-            }
+            
 
             if (!navigator.userAgent.match(/Android/i) && !navigator.userAgent.match(/iPhone/i)) {
                 // deeplink.style.display = "none";
@@ -399,7 +398,6 @@
                     window.location.replace("instagram://");
                 }
             }
-        }
     </script>
 
     <script src="js/script.js"></script>
