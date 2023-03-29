@@ -4,7 +4,7 @@
       "details": [
         {
           "appID": "AV86DPYTYA.com.suez.tsme",
-          "paths": ["/upload_counter_by_ama/*"]
+          "paths": ["*"]
         }
       ]
     }
