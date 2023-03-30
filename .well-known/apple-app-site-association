@@ -11,7 +11,7 @@
           {
             "/": "/launch",
             "comment": "Matches any URL whose path starts with /launch"
-          },
+          }
         ]
       }
     ]
