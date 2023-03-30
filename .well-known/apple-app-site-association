@@ -1,13 +1,24 @@
 {
-    "applinks": {
-      "apps": [],
-      "details": [
-        {
-          "appID": "AV86DPYTYA.com.suez.tsme",
-          "paths": ["/upload_counter_by_ama/*"]
-        }
-      ]
-    }
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["AV86DPYTYA.com.suez.tsme", "AV86DPYTYA.com.suez.tsme"],
+        "components": [
+          {
+            "/": "/upload_counter_by_ama",
+            "comment": "Matches any URL whose path starts with /upload"
+          },
+          {
+            "/": "/launch",
+            "comment": "Matches any URL whose path starts with /launch"
+          },
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": ["AV86DPYTYA.com.suez.tsme"]
+  }
 }
 
 
