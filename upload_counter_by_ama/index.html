@@ -5,6 +5,7 @@
 <h1>ceci est la page de d'appel de la relève</h1>
 <p>Relève Compteur...</p>
 <script>
+    document.addEventListener("DOMContentLoaded", function() {
           const params = new Proxy(new URLSearchParams(window.location.search), {
             get: (searchParams, prop) => searchParams.get(prop),
             });
@@ -35,6 +36,7 @@
                     linker.openURL(urlIos);
                 }
             }
+        });
 </script>
 </body>
 </html>
