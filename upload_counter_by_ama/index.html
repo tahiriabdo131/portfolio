@@ -5,7 +5,6 @@
 <h1>ceci est la page de d'appel de la relève</h1>
 <p>Relève Compteur...</p>
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
           const params = new Proxy(new URLSearchParams(window.location.search), {
             get: (searchParams, prop) => searchParams.get(prop),
             });
@@ -17,26 +16,22 @@
             var email = params.email;
             localStorage.setItem("urlandroid", "intent://abdelalitahiri.com/upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email+"#Intent;scheme=https;package=com.suez.tsme;end");
             localStorage.setItem("urlios", "com.suez.tsme://upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email);
-            //var element = document.getElementById("#urlios");
-            //element.value= "ama-mobile://upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email;
-            const modal = document.querySelector(".modal");
 
             function openAMA() {
                 //Android
                 if (navigator.userAgent.match(/Android/i)) {
                     const url = localStorage.getItem("urlandroid");
                     console.log("urlAndroid" + url);
-                    linker.openURL(url);
+                    location.replace(url);
                 }
 
                 //IOS
                 if (navigator.userAgent.match(/iPhone/i)) {
                     const urlIos = localStorage.getItem("urlios");
                     console.log("iphoneUrl"+ urlIos);
-                    linker.openURL(urlIos);
+                    location.replace(urlIos);
                 }
             }
-        });
 </script>
 </body>
 </html>
