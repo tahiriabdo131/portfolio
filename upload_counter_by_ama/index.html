@@ -15,7 +15,7 @@
             var year = params.year;
             var email = params.email;
             console.log(email);
-            localStorage.setItem("urlandroid", "intent://abdelalitahiri.com/upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email+"#Intent;scheme=https;package=com.suez.tsme;end");
+            localStorage.setItem("urlandroid", "intent://abdelalitahiri.com/upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email+"#Intent;scheme=https;end");
             localStorage.setItem("urlios", "com.suez.tsme://upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email);
 
             function openAMA() {
@@ -23,10 +23,10 @@
                 if (navigator.userAgent.match(/Android/i)) {
                     const url = localStorage.getItem("urlandroid");
                     console.log("urlAndroid" + url);
-                    var result = window.confirm("confirm"+"intent://abdelalitahiri.com/upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email+"#Intent;scheme=https;package=com.suez.tsme;end");
-                    if (result) {
+                    //var result = window.confirm("confirm"+"intent://abdelalitahiri.com/upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email+"#Intent;scheme=https;package=com.suez.tsme;end");
+                    //if (result) {
                         window.location.replace(url);
-                    }
+                    //}
                 }
 
                 //IOS
