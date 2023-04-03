@@ -5,20 +5,18 @@
 <h1>ceci est la page de d'appel de la relève</h1>
 <p>Relève Compteur...</p>
 <script>    
-            //get post params 
-            var urlPhotoCompteur = window.location.href;
-            urlPhotoCompteur = urlPhotoCompteur.replace("https://abdelalitahiri.com/upload_counter_by_ama/photo_compteur?url=", "");
-            urlPhotoCompteur = urlPhotoCompteur.split("/");
-            
-            var campaign = urlPhotoCompteur[0];
-            var reference = urlPhotoCompteur[1];
-            var day = urlPhotoCompteur[2];
-            var month = urlPhotoCompteur[3];
-            var year = urlPhotoCompteur[4];
-            var email = urlPhotoCompteur[5];
+            const params = new Proxy(new URLSearchParams(window.location.search), {
+            get: (searchParams, prop) => searchParams.get(prop),
+            });
+            var campaign = params.campaign;
+            var reference = params.reference;
+            var day = params.day;
+            var month = params.month;
+            var year = params.year;
+            var email = params.email;
             console.log(email);
-            localStorage.setItem("urlandroid", "intent://abdelalitahiri.com/upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email+"#Intent;scheme=https;end");
-            localStorage.setItem("urlios", "com.suez.tsme://upload_counter_by_ama/photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"/"+email);
+            localStorage.setItem("urlandroid", "intent://abdelalitahiri.com/photo_compteur?campaign="+campaign+"&reference="+reference+"&d="+day+"&m"+month+"&y"+year+"&email"+email+"#Intent;scheme=https;end");
+            localStorage.setItem("urlios", "com.suez.tsme://photo_compteur?campaign="+campaign+"&reference="+reference+"&d="+day+"&m"+month+"&y"+year+"&email"+email);
 
             function openAMA() {
                 //Android
