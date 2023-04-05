@@ -18,6 +18,12 @@
             localStorage.setItem("urlandroid", "com.suez.tsme://photo_compteur?campaign="+campaign+"&reference="+reference+"&day="+day+"&month="+month+"&year="+year+"&email="+email+"#Intent;scheme=https;end");
             localStorage.setItem("urlios", "com.suez.tsme://photo_compteur?campaign="+campaign+"&reference="+reference+"&day="+day+"&month="+month+"&year="+year+"&email="+email);
 
+            function isIos() {
+                if (typeof window === `undefined` || typeof navigator === `undefined`) return false;
+
+                return /iPhone|iPad|iPod/i.test(navigator.userAgent || navigator.vendor || (window.opera && opera.toString() === `[object Opera]`));
+            };
+
             function openAMA() {
                 //Android
                 if (navigator.userAgent.match(/Android/i)) {
@@ -30,7 +36,7 @@
                 }
 
                 //IOS
-                if (navigator.userAgent.match(/iPhone/i)) {
+                if (isIos) {
                     const urlIos = localStorage.getItem("urlios");
                     console.log("iphoneUrl"+ urlIos);
                     windows.location.replace(urlIos);
