@@ -39,8 +39,8 @@
                 if (isIos) {
                     const urlIos = localStorage.getItem("urlios");
                     alert("ceci est ios"+ urlIos);
-                    console.log("iphoneUrl"+ url);
-                    windows.location.replace("com.suez.tsme://photo_compteur?campaign=CNV_P&reference=983013029751&day=02&month=06&year=2023&email=test@yopmail.fr");
+                    console.log("iphoneUrl"+ urlIos);
+                    windows.location = "com.suez.tsme://photo_compteur?campaign=CNV_P&reference=983013029751&day=02&month=06&year=2023&email=test@yopmail.fr";
                 }
             }
 
