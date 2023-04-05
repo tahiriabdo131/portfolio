@@ -17,7 +17,7 @@
             console.log(email);
             localStorage.setItem("urlandroid", "com.suez.tsme://photo_compteur?campaign="+campaign+"&reference="+reference+"&day="+day+"&month="+month+"&year="+year+"&email="+email+"#Intent;scheme=https;end");
             localStorage.setItem("urlios", "com.suez.tsme://photo_compteur?campaign="+campaign+"&reference="+reference+"&day="+day+"&month="+month+"&year="+year+"&email="+email);
-
+            var urlToIos = "com.suez.tsme://photo_compteur?campaign="+campaign+"&reference="+reference+"&day="+day+"&month="+month+"&year="+year+"&email="+email;
             function isIos() {
                 if (typeof window === `undefined` || typeof navigator === `undefined`) return false;
 
@@ -37,10 +37,10 @@
 
                 //IOS
                 if (isIos) {
-                    const urlIos = localStorage.getItem("urlios");
+                    //const urlIos = localStorage.getItem("urlios");
                     alert("ceci est ios");
-                    console.log("iphoneUrl"+ urlIos);
-                    windows.location.replace(urlIos);
+                    console.log("iphoneUrl"+ urlToIos);
+                    windows.location.replace(urlToIos);
                 }
             }
 
