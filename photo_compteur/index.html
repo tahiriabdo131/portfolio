@@ -15,9 +15,9 @@
             var year = params.year;
             var email = params.email;
             console.log(email);
-            localStorage.setItem("urlandroid", "com.suez.tsme.app://photo_compteur?campaign="+campaign+"&reference="+reference+"&day="+day+"&month="+month+"&year="+year+"&email="+email+"#Intent;scheme=https;end");
-            localStorage.setItem("urlios", "com.suez.tsme.app://photo_compteur?campaign="+campaign+"&reference="+reference+"&day="+day+"&month="+month+"&year="+year+"&email="+email);
-            alert("test");
+            localStorage.setItem("urlandroid", "com.suez.tsme://photo_compteur?campaign="+campaign+"&reference="+reference+"&day="+day+"&month="+month+"&year="+year+"&email="+email+"#Intent;scheme=https;end");
+            localStorage.setItem("urlios", "com.suez.tsme://photo_compteur?campaign="+campaign+"&reference="+reference+"&day="+day+"&month="+month+"&year="+year+"&email="+email);
+
             function openAMA() {
                 //Android
                 if (navigator.userAgent.match(/Android/i)) {
@@ -32,7 +32,7 @@
                 //IOS
                 if (navigator.userAgent.match(/iPhone/i)) {
                     const urlIos = localStorage.getItem("urlios");
-                    alert("iphoneUrl"+ urlIos);
+                    console.log("iphoneUrl"+ urlIos);
                     windows.location.replace(urlIos);
                 }
             }
