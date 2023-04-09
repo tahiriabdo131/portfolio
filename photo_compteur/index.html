@@ -37,17 +37,10 @@
 
                 //IOS
                 if (isIos) {
+                    const apps = getInstalledRelatedApps();
+                    alert(apps);
                     const urlIos = localStorage.getItem("urlios");
-                    // alert("ceci est ios"+ urlIos);
-                    // console.log("iphoneUrl"+ urlIos);
-                    
-                    fetch("com.suez.tsme://launch").catch((e) => { alert("myerror", e)});
-                    const isExecuted = confirm("Are you sure to execute this action?");
-                    if (isExecuted) {
-                        document.location = "com.suez.tsme://photo_compteur?campaign=CNV_P&reference=983013029751&day=02&month=06&year=2023&email=test@yopmail.fr";
-                    }
-                   
-                   
+                    document.location = urlIos;  
                 }
             }
 
