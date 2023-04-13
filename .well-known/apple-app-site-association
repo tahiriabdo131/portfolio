@@ -4,11 +4,11 @@
     "details": [
       {
         "appID": "AV86DPYTYA.com.suez.tsme",
-        "paths": ["photo_compteur", "/launch"]
+        "paths": ["/photo_compteur", "/launch"]
       },
       {
         "appID": "A72D5D2R85.com.suez.tsme.app",
-        "paths": ["*"]
+        "paths": ["/photo_compteur", "/launch"]
       }
     ]
   }
