@@ -15,7 +15,7 @@
             var year = params.year;
             var email = params.email;
             console.log(email);
-            localStorage.setItem("urlandroid", "com.suez.tsme://photo_compteur?campaign="+campaign+"&reference="+reference+"&day="+day+"&month="+month+"&year="+year+"&email="+email+"#Intent;scheme=https;end");
+            localStorage.setItem("urlandroid", "com.suez.tsme://photo_compteur/"+campaign+"/"+reference+"/"+day+"/"+month+"/"+year+"#Intent;scheme=https;end");
             localStorage.setItem("urlios", "com.suez.tsme://photo_compteur?campaign="+campaign+"&reference="+reference+"&day="+day+"&month="+month+"&year="+year+"&email="+email);
             var urlToIos = "com.suez.tsme://photo_compteur?campaign="+campaign+"&reference="+reference+"&day="+day+"&month="+month+"&year="+year+"&email="+email;
             function isIos() {
